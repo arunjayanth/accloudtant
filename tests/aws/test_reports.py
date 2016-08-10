@@ -628,7 +628,7 @@ def test_reports_table(capsys, monkeypatch, ec2_resource, ec2_client,
     monkeypatch.setattr('boto3.client', ec2_client)
     ec2_client.set_responses({}, reserved_instances)
     monkeypatch.setattr(
-        'accloudtant.aws.prices.process_ec2',
+        'accloudtant.aws.prices.web.process_ec2',
         process_ec2
         )
     process_ec2.set_responses(prices)
@@ -1255,7 +1255,7 @@ def test_reports_csv(capsys, monkeypatch, ec2_resource, ec2_client,
     monkeypatch.setattr('boto3.client', ec2_client)
     ec2_client.set_responses({}, reserved_instances)
     monkeypatch.setattr(
-        'accloudtant.aws.prices.process_ec2',
+        'accloudtant.aws.prices.web.process_ec2',
         process_ec2
         )
     process_ec2.set_responses(prices)

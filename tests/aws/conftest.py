@@ -218,7 +218,7 @@ def mock_processor():
 def mock_process_generic():
     class MockProcessGeneric(object):
         def __call__(self, data, js_name, instances):
-            section = accloudtant.aws.prices.SECTION_NAMES[js_name]
+            section = accloudtant.aws.prices.web.SECTION_NAMES[js_name]
             generic = {
                 'version': "0.1",
                 'kind': section['kind'],

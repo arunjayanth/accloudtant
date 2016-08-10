@@ -23,7 +23,7 @@ from tabulate import tabulate
 from accloudtant.utils import fix_lazy_json
 
 
-class Prices(object):
+class WebPrices(object):
     def __init__(self):
         with warnings.catch_warnings(record=True) as price_warnings:
             curr_url = 'http://aws.amazon.com/ec2/pricing/'
